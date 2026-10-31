@@ -1,0 +1,65 @@
+asic_pin,schematic_signal,schematic_direction,recovered_direction,hdl_connection,active_level,notes
+1,D9,bidirectional,unused,,,Not used by the 8-bit SNES personality
+2,D10,bidirectional,unused,,,Not used by the 8-bit SNES personality
+3,GND,power_in,power,,0 V,
+4,D11,bidirectional,unused,,,Not used by the 8-bit SNES personality
+5,D12,bidirectional,unused,,,Not used by the 8-bit SNES personality
+6,D13,bidirectional,unused,,,Not used by the 8-bit SNES personality
+7,GND,power_in,power,,0 V,
+8,D14,bidirectional,unused,,,Not used by the 8-bit SNES personality
+9,D15,bidirectional,unused,,,Not used by the 8-bit SNES personality
+10,/VRES,input,input,reset_n derived with pin 18,low,Do not connect directly without preserving power-good reset behavior
+11,SRAM.EN,output,unused,,,The recovered SNES SRAM select is physical pin 12
+12,I/O,output,output,sram_select_n,low,SNES /SRAM.CE
+13,/CAS0.Game,output,output,game_read_n,low,SNES /Read.Top
+14,VCC,power_in,power,,+5 V,
+15,EEPROM.OE,output,output,eeprom_oe_n,low,Schematic name omits the recovered active-low polarity
+16,Switch.1,input,input,switch_active = !pin16,low,Low is the replacement-enabled switch position
+17,/CAS0.Sys,input,input,bus_read = !pin17,low,SNES /Read.Sys
+18,Pwr.Good,input,input,reset_n derived with pin 10,high,RC-delayed power-good input
+19,Switch.3,input,input,switch_program = !pin19,low,Low at reset enters menu/programming state
+20,A0,input,input,bus_addr[0],,
+21,A1,input,input,bus_addr[1],,
+22,A2,input,input,bus_addr[2],,
+23,A3,input,input,bus_addr[3],,
+24,A4,input,input,bus_addr[4],,
+25,A5,input,input,bus_addr[5],,
+26,GND,power_in,power,,0 V,
+27,A6,input,input,bus_addr[6],,
+28,A7,input,input,bus_addr[7],,
+29,A8,input,input,bus_addr[8],,
+30,A9,input,input,bus_addr[9],,
+31,A10,input,input,bus_addr[10],,
+32,A11,input,input,bus_addr[11],,
+33,A12,input,input,bus_addr[12],,
+34,A13,input,input,bus_addr[13],,
+35,A14,input,input,bus_addr[14],,
+36,A15,input,input,bus_addr[16],,Original symbol name; board connection is SNES BA0
+37,A16,input,input,bus_addr[17],,Original symbol name; board connection is SNES BA1
+38,A17,input,input,bus_addr[18],,Original symbol name; board connection is SNES BA2
+39,A18,input,input,bus_addr[19],,Original symbol name; board connection is SNES BA3
+40,A19,input,input,bus_addr[20],,Original symbol name; board connection is SNES BA4
+41,GND,power_in,power,,0 V,
+42,I/O,output,input,bus_addr[15],,Physically SNES CPU A15; this die ignores it in comparisons
+43,A20,input,input,bus_addr[21],,Original symbol name; board connection is SNES BA5
+44,A21,input,input,bus_addr[22],,Original symbol name; board connection is SNES BA6
+45,A22,input,input,bus_addr[23],,Original symbol name; board connection is SNES BA7
+46,/UWR,input,input,bus_write = !pin46,low,SNES /Write
+47,I/O,output,output,top_cart_select_n,low,Held inactive by the recovered SNES personality
+48,I/O,output,output,middle_cart_select_n,low,Held active by the recovered SNES personality
+49,I/O,no_connect,output,io49,,Unconnected on retail board; low in menu and high in game state
+50,/AS.Sys,input,strap,personality_snes = 1'b1,low,Grounded SNES personality strap
+51,/AS.Sys,input,strap,personality_snes = 1'b1,low,Grounded SNES personality strap
+52,GND,power_in,power,,0 V,
+53,D0,bidirectional,bidirectional,bus_wdata[0] / bus_rdata[0] when bus_drive,,
+54,D1,bidirectional,bidirectional,bus_wdata[1] / bus_rdata[1] when bus_drive,,
+55,D2,bidirectional,bidirectional,bus_wdata[2] / bus_rdata[2] when bus_drive,,
+56,D3,bidirectional,bidirectional,bus_wdata[3] / bus_rdata[3] when bus_drive,,
+57,VCC,power_in,power,,+5 V,
+58,GND,power_in,power,,0 V,
+59,D4,bidirectional,bidirectional,bus_wdata[4] / bus_rdata[4] when bus_drive,,
+60,D5,bidirectional,bidirectional,bus_wdata[5] / bus_rdata[5] when bus_drive,,
+61,D6,bidirectional,bidirectional,bus_wdata[6] / bus_rdata[6] when bus_drive,,
+62,GND,power_in,power,,0 V,
+63,D7,bidirectional,bidirectional,bus_wdata[7] / bus_rdata[7] when bus_drive,,
+64,D8,bidirectional,unused,,,Not used by the 8-bit SNES personality
