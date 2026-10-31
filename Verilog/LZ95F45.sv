@@ -1,6 +1,4 @@
 // Synthesizable behavioral replacement for the Datel/Sharp LZ95F45.
-// Original-package connections: LZ95F45_Sega.pinmap.csv and
-// LZ95F45_SNES.pinmap.csv. See PIN_MAPS.md for wrapper conventions.
 //
 module lz95f45 (
     input  logic        clk,
