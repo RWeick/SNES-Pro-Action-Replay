@@ -1,5 +1,5 @@
 # SNES-Pro-Action-Replay
-The Kicad files and rom dump of the SNES Pro Action Replay
+Everything necessary to produce the SNES Pro Action Replay
 
 PCB Thickness: 1.2 mm
 
